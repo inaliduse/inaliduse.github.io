@@ -43,8 +43,9 @@
   <img src="https://www.iheartnaptime.net/wp-content/uploads/2022/05/I-Heart-Naptime-homemade-vanilla-cake.jpg">
   <h1>cakes4life</h1>
   <p>~test~</p>
-  <input id="Name" type="name" placeholder="your name">
-	<input  id= "Email" type="email" placeholder="your email">
+  <input id= "Name" type="name" placeholder="your name">
+	<input id= "Email" type="email" placeholder="your email">
+	<input id= "DOB" type="dob" placeholder="your date of birth">
   <input id="submit" type="submit">
 	
 	<script type="module">
@@ -70,6 +71,7 @@
 		const db = getDatabase(app);
 		const Name = document.querySelector("#Name") 
 		const Email = document.querySelector("#Email")
+		const DOB = document.querySelector("#DOB")
 		document.querySelector('#submit').addEventListener('click', Submit)
 		
 		function Submit() {
@@ -78,10 +80,12 @@
 		  set(ref(db, timestamp), {
 			  Name: Name.value,
 		      email: Email.value,
+		        DOB: DOB.value,
 		  });
 
 		  Name.value = ""
 		  Email.value = ""
+			DOB. value = ""
 		}
 		
 		function buildTimestamp() {
