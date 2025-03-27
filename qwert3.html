@@ -81,6 +81,8 @@ input {
 .dessert{
   background-image: url("https://static01.nyt.com/images/2020/11/01/dining/Carrot-Cake-textless/Carrot-Cake-textless-googleFourByThree-v2.jpg");
 }
+.dessert2{
+  background-image: url("https://www.iheartnaptime.net/wp-content/uploads/2022/05/I-Heart-Naptime-homemade-vanilla-cake.jpg");
 .price {
   float: right;
 }
@@ -126,6 +128,11 @@ input {
   <p>carrot cake <span class="price">$15</span><br />
   <small>Buttery carrot cake. Comes with vanilla frosting and fresh blended carrots. This cake is vegan!.</small></p>
 </div>
+
+<div class="dessert2"> <input type="number" min="0" style="width: 50px" class="quantities">
+  <p>vanilla cake <span class="price">$10</span><br />
+  <small>A nice plain vanilla cake if you don\'t enjoy other flavorful cakes. This cake contains barely any sugar.</small></p>
+</div>
 <br><br>
   <input id="Name" type="name" placeholder="your name">
 	<input  id= "Email" type="email" placeholder="your email">
@@ -155,7 +162,7 @@ input {
 
 		const Email = document.querySelector("#Email")
 		  const quantities = document.querySelectorAll(".quantities")
-		  const itemsList = ["chocolate-cake", "ice-cream-cake", "carrot-cake"]
+		  const itemsList = ["chocolate-cake", "ice-cream-cake", "carrot-cake", "vanilla-cake"]
 		document.querySelector('#submit').addEventListener('click', Submit)
 		  const prices = document.querySelectorAll(".price")
 		
